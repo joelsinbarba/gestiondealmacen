@@ -10,4 +10,6 @@ public class GestiondealmacenApplication {
 		SpringApplication.run(GestiondealmacenApplication.class, args);
 	}
 
+	//Probando GIT
+
 }
