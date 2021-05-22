@@ -8,53 +8,53 @@ public class Producto implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
-    private int CodigoProducto;
-    private String Descripcion;
+    private int codigoProducto;
+    private String descripcion;
     // private TipoProducto Tipo;
-    private Double Precio;
-    private Double Existencia;
+    private Double precio;
+    private Double existencia;
     // private UnidadMedida UnidadMedida;
 
 
     public int getCodigoProducto() {
-        return CodigoProducto;
+        return codigoProducto;
     }
 
     public void setCodigoProducto(int codigoProducto) {
-        CodigoProducto = codigoProducto;
+        this.codigoProducto = codigoProducto;
     }
 
     public String getDescripcion() {
-        return Descripcion;
+        return descripcion;
     }
 
     public void setDescripcion(String descripcion) {
-        Descripcion = descripcion;
+        this.descripcion = descripcion;
     }
 
     public Double getPrecio() {
-        return Precio;
+        return precio;
     }
 
     public void setPrecio(Double precio) {
-        Precio = precio;
+        this.precio = precio;
     }
 
     public Double getExistencia() {
-        return Existencia;
+        return existencia;
     }
 
     public void setExistencia(Double existencia) {
-        Existencia = existencia;
+        this.existencia = existencia;
     }
 
     @Override
     public String toString() {
         return "Producto{" +
-                "CodigoProducto=" + CodigoProducto +
-                ", Descripcion='" + Descripcion + '\'' +
-                ", Precio=" + Precio +
-                ", Existencia=" + Existencia +
+                "CodigoProducto=" + codigoProducto +
+                ", Descripcion='" + descripcion + '\'' +
+                ", Precio=" + precio +
+                ", Existencia=" + existencia +
                 '}';
     }
 }
