@@ -30,7 +30,7 @@ public class GestiondealmacenApplication extends SpringBootServletInitializer {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/greeting-javaconfig").allowedOrigins("https://store-system-uaa-java.herokuapp.com/");
+				registry.addMapping("/").allowedOrigins("https://store-system-uaa-java.herokuapp.com/");
 			}
 		};
 	}
