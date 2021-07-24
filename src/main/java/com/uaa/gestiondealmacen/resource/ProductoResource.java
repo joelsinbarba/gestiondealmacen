@@ -38,7 +38,7 @@ public class ProductoResource {
     @PutMapping("/actualizar")
     public ResponseEntity<Producto> actualizarProducto(@RequestBody Producto producto){
         Producto productoActualizado = productoService.actualizarProducto(producto);
-        return new ResponseEntity<>(productoActualizado, HttpStatus.CREATED);
+        return new ResponseEntity<>(productoActualizado, HttpStatus.OK);
     }
 
     @PostMapping("/eliminar/{id}")

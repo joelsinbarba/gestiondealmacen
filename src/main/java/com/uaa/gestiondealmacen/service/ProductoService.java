@@ -30,7 +30,6 @@ public class ProductoService {
     }
 
     public Producto agregarProducto(Producto producto){
-        //producto.setCodigoProducto();
         return productoRepo.save(producto);
     }
 
