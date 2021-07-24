@@ -5,6 +5,8 @@ import java.io.Serializable;
 
 @Entity
 public class Proveedor implements Serializable {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
@@ -14,6 +16,14 @@ public class Proveedor implements Serializable {
     private String direccion;
     private String telefono;
     private String mail;
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
 
     public String getRUC() {
         return RUC;
