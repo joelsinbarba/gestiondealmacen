@@ -14,6 +14,13 @@ public class DetalleTransaccion implements Serializable {
     private int Cantidad;
     private Double Importe;
 
+    //@MapsId("ID")
+    @ManyToOne
+    private Transaccion transaccion;
+
+    //@EmbeddedId
+    //private TransaccionDetallePK transaccionDetallePK;
+
     public int getID() {
         return ID;
     }
