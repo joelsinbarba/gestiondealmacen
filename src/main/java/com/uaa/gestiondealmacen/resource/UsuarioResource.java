@@ -47,6 +47,12 @@ public class UsuarioResource {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody Usuario usuario){
+        String login = usuarioService.login(usuario);
+        return new ResponseEntity<>(login, HttpStatus.OK);
+    }
+
 
 
 

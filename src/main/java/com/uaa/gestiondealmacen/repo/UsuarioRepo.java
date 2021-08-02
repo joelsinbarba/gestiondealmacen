@@ -11,4 +11,7 @@ public interface UsuarioRepo extends JpaRepository<Usuario, Integer> {
     void deleteUsuarioByCI(int CI);
 
     Optional<Usuario> findUsuarioByCI(int CI);
+
+    Optional<Usuario> findUsuarioByUsuarioLog(String usuarioLog);
+
 }

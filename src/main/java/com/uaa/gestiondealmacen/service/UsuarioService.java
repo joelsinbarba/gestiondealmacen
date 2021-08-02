@@ -36,6 +36,17 @@ public class UsuarioService {
         return usuarioRepo.save(usuario);
     }
 
+    public String login(Usuario usuario){
+        //producto.setCodigoProducto();
+        Usuario u = usuarioRepo.findUsuarioByUsuarioLog(usuario.getUsuarioLog()).orElseThrow(()-> new ProductNotFoundException("El usuario #" + usuario.getUsuarioLog() + "no fue encontrado"));
+       if(u.getUsuarioLog().equals(usuario.getUsuarioLog()) && u.getPassLog().equals(usuario.getPassLog())){
+           return "login";
+       }else {
+           return "";
+       }
+
+    }
+
     public Usuario actualizarUsuario(Usuario usuario){
         return usuarioRepo.save(usuario);
     }
